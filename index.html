@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="mobile.css" media="screen and (max-width: 640px)"/>
+    <link rel="stylesheet" href="styles.css" media="screen and (min-width: 640px)"/>
+    <title>Devansh</title>
+    <link rel="icon" href="./assets/img/navi.png">
+</head>
+
+
+<body>
+
+
+<div class="ascii-logo">    
+  <pre class="ascii-logo__logo1">
+
+    ▓█████▄  ▓█████ ██▒   █▓ ▄▄▄      ███▄    █   ██████   ██░ ██ 
+    ▒██▀ ██▌ ▓█   ▀▓██░   █▒▒████▄    ██ ▀█   █ ▒██    ▒ ▒▓██░ ██ 
+    ░██   █▌ ▒███   ▓██  █▒░▒██  ▀█▄ ▓██  ▀█ ██▒░ ▓██▄   ░▒██▀▀██ 
+   ▒░▓█▄   ▌ ▒▓█  ▄  ▒██ █░░░██▄▄▄▄██▓██▒  ▐▌██▒  ▒   ██▒ ░▓█ ░██ 
+  ░░▒████▓ ▒░▒████   ▒▀█░  ▒▓█   ▓██▒██░   ▓██░▒██████▒▒ ░▓█▒░██▓
+  ░ ▒▒▓  ▒ ░░░ ▒░    ░ ▐░  ░▒▒   ▓▒█░ ▒░   ▒ ▒ ▒ ▒▓▒ ▒ ░  ▒ ░░▒░▒
+    ░ ▒  ▒ ░ ░ ░     ░ ░░  ░ ░   ▒▒ ░ ░░   ░ ▒░░ ░▒  ░ ░  ▒ ░▒░ ░
+    ░ ░  ░     ░        ░    ░   ▒     ░   ░ ░ ░  ░  ░    ░  ░░ ░
+      ░    ░   ░        ░        ░           ░       ░    ░  ░  ░
+  </pre>
+  <pre class="ascii-logo__logo2">
+
+    ▓█████▄  ▓█████ ██▒   █▓ ▄▄▄      ███▄    █   ██████   ██░ ██ 
+    ▒██▀ ██▌ ▓█   ▀▓██░   █▒▒████▄    ██ ▀█   █ ▒██    ▒ ▒▓██░ ██ 
+    ░██   █▌ ▒███   ▓██  █▒░▒██  ▀█▄ ▓██  ▀█ ██▒░ ▓██▄   ░▒██▀▀██ 
+   ▒░▓█▄   ▌ ▒▓█  ▄  ▒██ █░░░██▄▄▄▄██▓██▒  ▐▌██▒  ▒   ██▒ ░▓█ ░██ 
+  ░░▒████▓ ▒░▒████   ▒▀█░  ▒▓█   ▓██▒██░   ▓██░▒██████▒▒ ░▓█▒░██▓
+  ░ ▒▒▓  ▒ ░░░ ▒░    ░ ▐░  ░▒▒   ▓▒█░ ▒░   ▒ ▒ ▒ ▒▓▒ ▒ ░  ▒ ░░▒░▒
+    ░ ▒  ▒ ░ ░ ░     ░ ░░  ░ ░   ▒▒ ░ ░░   ░ ▒░░ ░▒  ░ ░  ▒ ░▒░ ░
+    ░ ░  ░     ░        ░    ░   ▒     ░   ░ ░ ░  ░  ░    ░  ░░ ░
+      ░    ░   ░        ░        ░           ░       ░    ░  ░  ░
+  </pre>
+  <pre class="ascii-logo__logo3">
+
+    ▓█████▄  ▓█████ ██▒   █▓ ▄▄▄      ███▄    █   ██████   ██░ ██ 
+    ▒██▀ ██▌ ▓█   ▀▓██░   █▒▒████▄    ██ ▀█   █ ▒██    ▒ ▒▓██░ ██ 
+    ░██   █▌ ▒███   ▓██  █▒░▒██  ▀█▄ ▓██  ▀█ ██▒░ ▓██▄   ░▒██▀▀██ 
+   ▒░▓█▄   ▌ ▒▓█  ▄  ▒██ █░░░██▄▄▄▄██▓██▒  ▐▌██▒  ▒   ██▒ ░▓█ ░██ 
+  ░░▒████▓ ▒░▒████   ▒▀█░  ▒▓█   ▓██▒██░   ▓██░▒██████▒▒ ░▓█▒░██▓
+  ░ ▒▒▓  ▒ ░░░ ▒░    ░ ▐░  ░▒▒   ▓▒█░ ▒░   ▒ ▒ ▒ ▒▓▒ ▒ ░  ▒ ░░▒░▒
+    ░ ▒  ▒ ░ ░ ░     ░ ░░  ░ ░   ▒▒ ░ ░░   ░ ▒░░ ░▒  ░ ░  ▒ ░▒░ ░
+    ░ ░  ░     ░        ░    ░   ▒     ░   ░ ░ ░  ░  ░    ░  ░░ ░
+      ░    ░   ░        ░        ░           ░       ░    ░  ░  ░
+  </pre>
+  <pre class="ascii-logo__logo4">
+
+    ▓█████▄  ▓█████ ██▒   █▓ ▄▄▄      ███▄    █   ██████   ██░ ██ 
+    ▒██▀ ██▌ ▓█   ▀▓██░   █▒▒████▄    ██ ▀█   █ ▒██    ▒ ▒▓██░ ██ 
+    ░██   █▌ ▒███   ▓██  █▒░▒██  ▀█▄ ▓██  ▀█ ██▒░ ▓██▄   ░▒██▀▀██ 
+   ▒░▓█▄   ▌ ▒▓█  ▄  ▒██ █░░░██▄▄▄▄██▓██▒  ▐▌██▒  ▒   ██▒ ░▓█ ░██ 
+  ░░▒████▓ ▒░▒████   ▒▀█░  ▒▓█   ▓██▒██░   ▓██░▒██████▒▒ ░▓█▒░██▓
+  ░ ▒▒▓  ▒ ░░░ ▒░    ░ ▐░  ░▒▒   ▓▒█░ ▒░   ▒ ▒ ▒ ▒▓▒ ▒ ░  ▒ ░░▒░▒
+    ░ ▒  ▒ ░ ░ ░     ░ ░░  ░ ░   ▒▒ ░ ░░   ░ ▒░░ ░▒  ░ ░  ▒ ░▒░ ░
+    ░ ░  ░     ░        ░    ░   ▒     ░   ░ ░ ░  ░  ░    ░  ░░ ░
+      ░    ░   ░        ░        ░           ░       ░    ░  ░  ░
+  </pre>
+  <pre class="ascii-logo__logo5">
+
+    ▓█████▄  ▓█████ ██▒   █▓ ▄▄▄      ███▄    █   ██████   ██░ ██ 
+    ▒██▀ ██▌ ▓█   ▀▓██░   █▒▒████▄    ██ ▀█   █ ▒██    ▒ ▒▓██░ ██ 
+    ░██   █▌ ▒███   ▓██  █▒░▒██  ▀█▄ ▓██  ▀█ ██▒░ ▓██▄   ░▒██▀▀██ 
+   ▒░▓█▄   ▌ ▒▓█  ▄  ▒██ █░░░██▄▄▄▄██▓██▒  ▐▌██▒  ▒   ██▒ ░▓█ ░██ 
+  ░░▒████▓ ▒░▒████   ▒▀█░  ▒▓█   ▓██▒██░   ▓██░▒██████▒▒ ░▓█▒░██▓
+  ░ ▒▒▓  ▒ ░░░ ▒░    ░ ▐░  ░▒▒   ▓▒█░ ▒░   ▒ ▒ ▒ ▒▓▒ ▒ ░  ▒ ░░▒░▒
+    ░ ▒  ▒ ░ ░ ░     ░ ░░  ░ ░   ▒▒ ░ ░░   ░ ▒░░ ░▒  ░ ░  ▒ ░▒░ ░
+    ░ ░  ░     ░        ░    ░   ▒     ░   ░ ░ ░  ░  ░    ░  ░░ ░
+      ░    ░   ░        ░        ░           ░       ░    ░  ░  ░
+  </pre>
+</div>
+
+
+<div class="titlebox">
+  <div class="titlebox__ascii-spacer">
+    <pre class="titlebox__ascii-content">
+
+    ▓█████▄  ▓█████ ██▒   █▓ ▄▄▄      ███▄    █   ██████   ██░ ██ 
+    ▒██▀ ██▌ ▓█   ▀▓██░   █▒▒████▄    ██ ▀█   █ ▒██    ▒ ▒▓██░ ██ 
+    ░██   █▌ ▒███   ▓██  █▒░▒██  ▀█▄ ▓██  ▀█ ██▒░ ▓██▄   ░▒██▀▀██ 
+   ▒░▓█▄   ▌ ▒▓█  ▄  ▒██ █░░░██▄▄▄▄██▓██▒  ▐▌██▒  ▒   ██▒ ░▓█ ░██ 
+  ░░▒████▓ ▒░▒████   ▒▀█░  ▒▓█   ▓██▒██░   ▓██░▒██████▒▒ ░▓█▒░██▓
+  ░ ▒▒▓  ▒ ░░░ ▒░    ░ ▐░  ░▒▒   ▓▒█░ ▒░   ▒ ▒ ▒ ▒▓▒ ▒ ░  ▒ ░░▒░▒
+    ░ ▒  ▒ ░ ░ ░     ░ ░░  ░ ░   ▒▒ ░ ░░   ░ ▒░░ ░▒  ░ ░  ▒ ░▒░ ░
+    ░ ░  ░     ░        ░    ░   ▒     ░   ░ ░ ░  ░  ░    ░  ░░ ░
+      ░    ░   ░        ░        ░           ░       ░    ░  ░  ░
+    </pre>
+
+  </div>
+  <h2 class="titlebox__desc">SOFTWARE ENGINEER</h2>
+  <div class="titlebox__links">
+      <a href="#about" class="titlebox__btn">ABOUT</a>
+      <a href="#projects" class="titlebox__btn">PROJECTS</a>
+      <a href="#contact" class="titlebox__btn">CONTACT</a>
+  </div>
+</div>
+
+<div class="overlay-about" id="about">
+    <a class="overlay-about__cancel" href="#"></a>
+  <div class="overlay-about__content">
+    <p class="overlay-about__title">Who am I?</p>
+    <div class="overlay-about__text">
+      <p>Hello! I'm Devansh, a CSE undergrad from Delhi, India and I LOVE everything to do with computers.  I'm passionate and quick to learn new tools and technologies.</p>
+      <p>Currently, I am an intern at Travel Lykke, working on an admin-facing Django site as well as an upcoming NextJS-based consumer site. I've previously interned at Aryago Traspotech, also in a web developer role.</p>
+      <p>Apart from websites, I've made several silly little projects - from a discord bot and 2D games to a connect 4 solver and a neural network that evolves in real time.  I'm also working on my own tiny OS and an interpreted programming language.</p>
+    </div>
+    <div class="overlay-about__imgbox">
+      <img class="overlay-about__img" src="./assets/img/devansh.png" alt="me">
+    </div>
+  </div>
+</div>
+
+<div class="overlay-projects" id="projects">
+  <a class="overlay-projects__cancel" href="#"></a>
+    <div class="overlay-projects__content">
+      <div class="overlay-projects__projects-title">
+        <div>PROJECTS</div>
+      </div>
+      <div class="overlay-projects__grid">
+        <div class="overlay-projects__project">
+          <a href="https://github.com/tyagidevansh/pogberry"><img src="./assets/img/pogberry.png" alt="Pogberry" class="overlay-projects__project-img"></a>
+          <div class="overlay-projects__project-title">Pogberry</div>
+          <div class="overlay-projects__description">VM bytecode compiler for my custom language, based on the book Crafting Interpreters. </div>
+          <a href="https://lainpunk1.github.io/pinfo/" class="overlay-projects__project-link">View on GitHub</a>
+        </div>
+        
+        <div class="overlay-projects__project">
+          <a href="https://github.com/tyagidevansh/rust-os"><img src="./assets/img/os.png" alt="Rust OS" class="overlay-projects__project-img"></a>
+          <div class="overlay-projects__project-title">Rust OS</div>
+          <div class="overlay-projects__description">A very simple operating system written in Rust - runs on bare metal!</div>
+          <a href="#" class="overlay-projects__project-link">View on GitHub</a>
+        </div>
+        
+        <div class="overlay-projects__project">
+          <a href="https://tyagidevansh.github.io/self-driving-car/"><img src="./assets/img/nn.png" alt="Evoling NN" class="overlay-projects__project-img"></a>
+          <div class="overlay-projects__project-title">Self Driving Car</div>
+          <div class="overlay-projects__description">Train neural networks and see them evolve in real time as they learn to drive a car through traffic</div>
+          <a href="#" class="overlay-projects__project-link">View Project</a>
+        </div>
+
+        <div class="overlay-projects__project">
+          <a href="https://github.com/tyagidevansh/ally"><img src="./assets/img/ally.png" alt="Ally" class="overlay-projects__project-img"></a>
+          <div class="overlay-projects__project-title">Ally</div>
+          <div class="overlay-projects__description">Your productivity companion - track your time and view progress!</div>
+          <a href="#" class="overlay-projects__project-link">View on GitHub</a>
+        </div>
+        
+        <div class="overlay-projects__project">
+          <a href="https://tune-oracle.vercel.app/"><img src="./assets/img/tuneoracle.png" alt="TuneOracle" class="overlay-projects__project-img"></a>
+          <div class="overlay-projects__project-title">TuneOracle</div>
+          <div class="overlay-projects__description">Extracting user's listening history using HTTP request headers and having AI judge their music tastes</div>
+          <a href="#" class="overlay-projects__project-link">View Project</a>
+        </div>
+        
+        <div class="overlay-projects__project">
+          <a href="https://tyagi-devansh.itch.io/mini-golf"><img src="./assets/img/minigolf.png" alt="MiniGolf" class="overlay-projects__project-img"></a>
+          <div class="overlay-projects__project-title">Mini Golf</div>
+          <div class="overlay-projects__description">A simple mini golf game made without using a game engine! SFML + GLSL </div>
+          <a href="#" class="overlay-projects__project-link">Get the game</a>
+        </div>
+
+        <div class="overlay-projects__project">
+          <a href="https://github.com/tyagidevansh/connect-4"><img src="./assets/img/connect4.png" alt="Connect4Solver" class="overlay-projects__project-img"></a>
+          <div class="overlay-projects__project-title">Connect 4 solver</div>
+          <div class="overlay-projects__description">Connect 4 solver which uses the Negamax variant of Minmax algorithm, with transposition table and pruning. Written in C++ </div>
+          <a href="#" class="overlay-projects__project-link">View on GitHub</a>
+        </div>
+
+        <div class="overlay-projects__project">
+          <a href="https://github.com/tyagidevansh/discord-clone"><img src="./assets/img/discord.png" alt="Discord" class="overlay-projects__project-img"></a>
+          <div class="overlay-projects__project-title">Discord Clone</div>
+          <div class="overlay-projects__description">Discord Clone made using Nextjs, Prisma, Tailwind, socket.io and livekit. Supports real-time texting, video calls and more  </div>
+          <a href="#" class="overlay-projects__project-link">Get the game</a>
+        </div>
+
+        <div class="overlay-projects__project overlay-projects__more-project">
+          <div class="overlay-projects__othertext">More to come!</div>
+        </div>
+      </div>
+    </div>
+</div>
+
+<div class="overlay-contact" id="contact">
+  <a class="overlay-contact__cancel" href="#"></a>
+  <div class="overlay-contact__content">
+      <p class="overlay-contact__title">Let's get in touch</p>
+      <a class="overlay-contact__link" href="mailto: devanshtyagi0607@gmail.com">devanshtyagi0607@gmail.com</a>
+      <div class="overlay-contact__links-grid">
+        <a class="overlay-contact__social-link" href="https://github.com/tyagidevansh" target="_blank">GitHub</a>
+        <a class="overlay-contact__social-link" href="https://www.linkedin.com/in/devansh-tyagi-138010165/" target="_blank">LinkedIn</a>
+        <a class="overlay-contact__social-link" href="./assets/pdf/resume.pdf" target="_blank">Resume</a>
+      </div>
+  </div>
+</div>
+
+
+</body>
+</html>
