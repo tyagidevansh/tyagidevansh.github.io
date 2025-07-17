@@ -690,3 +690,22 @@ p{
     }
 }
 
+/* Close buttons for overlays */
+.overlay-about__close,
+.overlay-projects__close,
+.overlay-contact__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+    z-index: 1000;
+}
+
+.overlay-about__close:hover,
+.overlay-projects__close:hover,
+.overlay-contact__close:hover {
+    color: #ccc;
+}
+
