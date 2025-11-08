@@ -12,8 +12,7 @@ function setup() {
 }
 
 function draw() {
-  // Balanced mouse tracking - responsive but smooth
-  smoothMouseX = lerp(smoothMouseX, mouseX / width, 0.04); // Increased from 0.02
+  smoothMouseX = lerp(smoothMouseX, mouseX / width, 0.04);
   smoothMouseY = lerp(smoothMouseY, 1.0 - mouseY / height, 0.04);
 
   shader(bgShader);
